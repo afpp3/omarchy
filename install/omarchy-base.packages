@@ -58,7 +58,6 @@ lazygit
 less
 libyaml
 libqalculate
-libreoffice
 llvm
 localsend
 luarocks
@@ -92,7 +91,6 @@ python-terminaltexteffects
 qt5-wayland
 ripgrep
 satty
-signal-desktop
 slurp
 spotify
 starship
@@ -105,7 +103,6 @@ tree-sitter-cli
 ttf-cascadia-mono-nerd
 ttf-ia-writer
 ttf-jetbrains-mono-nerd
-typora
 tzupdate
 ufw
 ufw-docker
