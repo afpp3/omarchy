@@ -6,4 +6,4 @@ cp -R ~/.local/share/omarchy/config/* ~/.config/
 cp ~/.local/share/omarchy/default/bashrc ~/.bashrc
 
 # Use default fish from Omarchy Custom
-cp -R ~/.local/share/omarchy/config/fish ~/.config/fish
+cp -R ~/.local/share/omarchy/config/fish/* ~/.config/fish/
