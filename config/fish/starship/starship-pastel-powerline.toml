@@ -1,0 +1,200 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# format = """
+# [](mauve)\
+# $os\
+# $username\
+# [](bg:pink fg:mauve)\
+# $directory\
+# [](fg:pink bg:peach)\
+# $git_branch\
+# $git_status\
+# [](fg:peach bg:sapphire)\
+# $c\
+# $elixir\
+# $golang\
+# $nodejs\
+# $rust\
+# $php\
+# [](fg:sapphire bg:blue)\
+# $docker_context\
+# [](fg:blue bg:sky)\
+# $time\
+# [ ](fg:sky)\
+# """
+
+format = """
+[](mauve)\
+$os\
+$username\
+[](bg:pink fg:mauve)\
+$directory\
+[](fg:pink bg:peach)\
+$git_branch\
+$git_status\
+[](fg:peach bg:sapphire)\
+$c\
+$elixir\
+$golang\
+$nodejs\
+$rust\
+$php\
+[](fg:sapphire bg:blue)\
+$docker_context\
+[](fg:blue bg:sky)\
+$time\
+[ ](fg:sky)\
+$line_break$character """
+
+
+# Sets user-defined palette
+# Palettes must be defined _after_ this line
+palette = "catppuccin_mocha"
+
+# Disable the blank line at the start of the prompt
+# add_newline = false
+
+# You can also replace your username with a neat symbol like   or disable this
+# and use the os module below
+[username]
+show_always = true
+style_user = "bg:mauve"
+style_root = "bg:mauve"
+format = '[$user ]($style)'
+disabled = false
+
+# An alternative to the username module which displays a symbol that
+# represents the current operating system
+[os]
+style = "bg:mauve"
+disabled = true      # Disabled by default
+
+# [directory]
+# format = "[](fg:mauve)[ $path ]($style)[](fg:mauve) "
+# truncation_length = 4
+# style = "bg:mauve bold base"
+
+[directory]
+# style = "fg:overlay1 bg:color_yellow"
+style = "bg:pink"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:mauve"
+format = '[[  $time ](fg:overlay1 bg:mauve)]($style)'
+
+# Starship modules
+[character]
+# Note the use of Catppuccin color 'peach'
+success_symbol = "[[󰄛](green) • ](peach)"
+error_symbol = "[[󰄛](red) • 󰅙](peach)"
+vimcmd_symbol = "[󰄛 ❮](subtext1)"           # For use with zsh-vi-mode
+
+[git_branch]
+symbol = ""
+style = "bg:peach"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:peach"
+format = '[$all_status$ahead_behind ]($style)'
+
+[docker_context]
+symbol = " "
+style = "bg:blue"
+format = '[ $symbol $context ]($style)'
+
+[elixir]
+symbol = " "
+style = "bg:sapphire"
+format = '[ $symbol ($version) ]($style)'
+
+[golang]
+symbol = " "
+style = "bg:sapphire"
+format = '[ $symbol ($version) ]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:base"
+# format = '[ $symbol ($version) ]($style)'
+format = '[[ $symbol( $version) ](fg:text bg:base)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:sapphire"
+format = '[ $symbol ($version) ]($style)'
+
+[php]
+symbol = ""
+style = "bg:color_blue"
+format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)'
+
+# Palette definitions
+[palettes.catppuccin_macchiato]
+rosewater = "#f4dbd6"
+flamingo = "#f0c6c6"
+pink = "#f5bde6"
+mauve = "#c6a0f6"
+red = "#ed8796"
+maroon = "#ee99a0"
+peach = "#f5a97f"
+yellow = "#eed49f"
+green = "#a6da95"
+teal = "#8bd5ca"
+sky = "#91d7e3"
+sapphire = "#7dc4e4"
+blue = "#8aadf4"
+lavender = "#b7bdf8"
+text = "#cad3f5"
+subtext1 = "#b8c0e0"
+subtext0 = "#a5adcb"
+overlay2 = "#939ab7"
+overlay1 = "#8087a2"
+overlay0 = "#6e738d"
+surface2 = "#5b6078"
+surface1 = "#494d64"
+surface0 = "#363a4f"
+base = "#24273a"
+mantle = "#1e2030"
+crust = "#181926"
+
+[palettes.catppuccin_mocha]
+rosewater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+mauve = "#cba6f7"
+red = "#f38ba8"
+maroon = "#eba0ac"
+peach = "#fab387"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+blue = "#89b4fa"
+lavender = "#b4befe"
+text = "#cdd6f4"
+subtext1 = "#bac2de"
+subtext0 = "#a6adc8"
+overlay2 = "#9399b2"
+overlay1 = "#7f849c"
+overlay0 = "#6c7086"
+surface2 = "#585b70"
+surface1 = "#45475a"
+surface0 = "#313244"
+base = "#1e1e2e"
+mantle = "#181825"
+crust = "#11111b"
