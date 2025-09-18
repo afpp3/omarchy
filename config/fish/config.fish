@@ -1,1 +1,1 @@
-source = ~/.local/share/omarchy/config/fish/rc
+source = ~/.local/share/omarchy/config/fish/rc.fish
