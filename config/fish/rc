@@ -1,7 +1,7 @@
-source ~/.local/share/omarchy/confg/fish/shell
-source ~/.local/share/omarchy/confg/fish/aliases
-source ~/.local/share/omarchy/confg/fish/functions
-source ~/.local/share/omarchy/confg/fish/init
-source ~/.local/share/omarchy/confg/fish/envs
+source ~/.local/share/omarchy/config/fish/shell
+source ~/.local/share/omarchy/config/fish/aliases
+source ~/.local/share/omarchy/config/fish/functions
+source ~/.local/share/omarchy/config/fish/init
+source ~/.local/share/omarchy/config/fish/envs
 
-# [[ $- == *i* ]] && bind -f ~/.local/share/omarchy/confg/fish/inputrc
+# [[ $- == *i* ]] && bind -f ~/.local/share/omarchy/config/fish/inputrc
